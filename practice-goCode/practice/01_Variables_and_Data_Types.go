@@ -54,7 +54,7 @@ func NoTriples(numbers [5]int) bool {
 	for index, element := range numbers {
 
 		if index > len(numbers)-3 {
-			return false
+			break
 		}
 
 		if element == numbers[index+1] && element == numbers[index+2] {
