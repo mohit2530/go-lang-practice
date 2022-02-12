@@ -46,3 +46,14 @@ func TestRotateLeft3(t *testing.T) {
 	}
 
 }
+
+func TestReverseOrder(t *testing.T) {
+
+	expected := []int{3, 2, 1}
+	actual := ReverseOrder([]int{1, 2, 3})
+
+	if len(expected) != len(actual) {
+		t.Errorf("array was not reversed. Expected : %v, Got : %v", expected, actual)
+	}
+
+}
