@@ -52,3 +52,43 @@ func ReverseOrder(numbers []int) []int {
 	fmt.Printf("reversed array of the array %v is %v\n", numbers, reversedArr)
 	return reversedArr
 }
+
+//MaxEnds3 - returns array with the highest number found across the first and last element
+func MaxEnds3(numbers []int) []int {
+
+	highestNumberInArr := 0
+	if numbers[0] > highestNumberInArr {
+		highestNumberInArr = numbers[0]
+	}
+	if numbers[len(numbers)-1] > highestNumberInArr {
+		highestNumberInArr = numbers[len(numbers)-1]
+	}
+
+	maxEndsArr := make([]int, 0)
+	for i := 0; i < len(numbers); i++ {
+		maxEndsArr = append(maxEndsArr, highestNumberInArr)
+	}
+	return maxEndsArr
+}
+
+// MiddleWay - returns the middle of two arrays and returns the middle values in array
+func MiddleWay(numbers1 []int, numbers2 []int) []int {
+	middleArr := make([]int, 0)
+	middleArr = append(middleArr, numbers1[len(numbers1)/2])
+	middleArr = append(middleArr, numbers2[len(numbers2)/2])
+	return middleArr
+}
+
+//SumOf28 - returns true if the sum of all 2's is equal to 8
+func SumOf28(numbers []int) bool {
+	sumOfElements := 0
+	for index, element := range numbers {
+		if numbers[index] == 2 {
+			sumOfElements += element
+		}
+	}
+	if sumOfElements == 8 {
+		return true
+	}
+	return false
+}
