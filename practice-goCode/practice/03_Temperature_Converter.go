@@ -13,7 +13,7 @@ import (
 	Example : 58 F is 14 C
 */
 
-//getUserInput - returns the user input from the user
+//getUserInput - returns the user input
 func getUserInput() (float64, string) {
 
 	fmt.Println("Temperature to convert : ")
